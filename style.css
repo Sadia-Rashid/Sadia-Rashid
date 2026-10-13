@@ -227,3 +227,79 @@ main {
   }
 }
 
+/* ===== FIX SERVICES FONT SIZE AND ALIGNMENT ===== */
+
+.service-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 24px;
+  width: 100%;
+}
+
+.service-list > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 16px 0;
+}
+
+.service-list > div span {
+  display: block;
+  flex: 1;
+  min-width: 0;
+  font-size: 18px;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+.service-list > div b {
+  flex-shrink: 0;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* ===== FIX SELECTED WORK HEADING POSITION ===== */
+
+#projects .section-content {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+}
+
+#projects .project-intro {
+  display: block;
+  order: -1;
+  width: 100%;
+  margin: 0 0 24px;
+}
+
+#projects .project-intro h2 {
+  display: block;
+  margin: 0;
+  text-align: left;
+}
+
+/* Hide the old placeholder introduction */
+#projects .project-intro p {
+  display: none;
+}
+
+#projects .project-grid {
+  order: 1;
+  width: 100%;
+}
+
+@media (max-width: 700px) {
+  .service-list {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .service-list > div span {
+    font-size: 17px;
+  }
+}
