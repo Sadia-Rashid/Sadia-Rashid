@@ -303,3 +303,27 @@ main {
     font-size: 17px;
   }
 }
+/* Reduce the size of your name */
+.hero h1 {
+  font-size: clamp(36px, 5vw, 58px) !important;
+  line-height: 1.1;
+}
+
+/* Keep Selected Work above the project cards */
+#projects .project-intro {
+  display: block !important;
+  order: -1 !important;
+  position: static !important;
+  margin: 0 0 28px !important;
+  width: 100% !important;
+}
+
+#projects .project-intro h2 {
+  margin: 0 !important;
+  text-align: left !important;
+}
+
+#projects .project-grid {
+  order: 1 !important;
+  margin-top: 0 !important;
+}
