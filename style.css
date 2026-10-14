@@ -449,3 +449,12 @@ a.contact-kicker:hover {
 #contact .section-label {
   margin-top: 0 !important;
 }
+#about {
+  padding-bottom: 20px !important;
+  margin-bottom: 0 !important;
+}
+
+#skills {
+  padding-top: 20px !important;
+  margin-top: 0 !important;
+}
