@@ -78,13 +78,11 @@ h2{font:600 clamp(38px,5vw,72px)/.98 "Space Grotesk",sans-serif;letter-spacing:-
   border: 1px solid #555555;
 }
 
-.feature,
-.feature.primary {
-  display: block;
+.feature {
   background: #242424;
   color: #ffffff;
-  padding: 32px;
-  min-height: 270px;
+  padding: 24px;
+  min-height: 0;
   box-sizing: border-box;
 }
 
@@ -93,7 +91,7 @@ h2{font:600 clamp(38px,5vw,72px)/.98 "Space Grotesk",sans-serif;letter-spacing:-
   color: #ffdf00;
   font-size: 12px;
   font-weight: 700;
-  margin-bottom: 45px;
+  margin-bottom: 20px;
 }
 
 .feature h3,
@@ -106,7 +104,8 @@ h2{font:600 clamp(38px,5vw,72px)/.98 "Space Grotesk",sans-serif;letter-spacing:-
 .feature p,
 .feature.primary p {
   color: #cccccc;
-  margin: 0 0 24px;
+  line-height: 1.6;
+  margin: 0;
 }
 
 .feature .tool-list,
