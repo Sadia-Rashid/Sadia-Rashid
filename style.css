@@ -79,6 +79,44 @@ h2{font:600 clamp(38px,5vw,72px)/.98 "Space Grotesk",sans-serif;letter-spacing:-
 
 .feature {
   background: var(--charcoal);
+  color: #ffffff;
+  padding: 32px;
+  min-height: 270px;
+  box-sizing: border-box;
+}
+
+.feature.primary {
+  background: var(--charcoal);
+  color: #ffffff;
+}
+
+.feature.primary p,
+.feature.primary .tool-list {
+  color: var(--grey);
+}
+
+.feature.primary .number,
+.feature .number {
+  color: var(--yellow);
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 45px;
+}
+
+.feature h3 {
+  color: #ffffff;
+  font: 600 28px/1.05 "Space Grotesk";
+  margin: 0 0 15px;
+  letter-spacing: -0.02em;
+}
+
+.feature p {
+  color: var(--grey);
+  margin: 0 0 24px;
+}
+```
+.feature {
+  background: var(--charcoal);
   padding: 32px;
   min-height: 270px;
   box-sizing: border-box;
