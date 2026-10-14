@@ -391,3 +391,43 @@ a.contact-kicker {
 a.contact-kicker:hover {
   color: #ffffff;
 }
+/* Compact Skills Grid Fix */
+.feature-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 1px !important;
+  align-items: stretch !important;
+}
+
+.feature-grid > .feature {
+  display: block !important;
+  min-height: 0 !important;
+  height: auto !important;
+  padding: 22px 24px !important;
+  margin: 0 !important;
+  background: var(--charcoal) !important;
+  box-sizing: border-box !important;
+}
+
+.feature-grid > .feature .number {
+  margin-bottom: 14px !important;
+}
+
+.feature-grid > .feature h3 {
+  margin: 0 0 10px !important;
+}
+
+.feature-grid > .feature p {
+  margin: 0 !important;
+  line-height: 1.6 !important;
+}
+
+.feature-grid > .feature .tool-list {
+  margin-top: 12px !important;
+}
+
+@media (max-width: 700px) {
+  .feature-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
