@@ -379,3 +379,14 @@ main {
   order: 1 !important;
   margin-top: 0 !important;
 }
+a.contact-kicker {
+  display: inline-block;
+  color: #ffdf00;
+  text-decoration: underline;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+a.contact-kicker:hover {
+  color: #ffffff;
+}
