@@ -431,3 +431,21 @@ a.contact-kicker:hover {
     grid-template-columns: 1fr !important;
   }
 }
+
+#education,
+#contact {
+  padding-top: 30px !important;
+  padding-bottom: 30px !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+#education .section-content,
+#contact .section-content {
+  margin-top: 0 !important;
+}
+
+#education .section-label,
+#contact .section-label {
+  margin-top: 0 !important;
+}
