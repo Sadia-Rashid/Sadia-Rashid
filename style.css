@@ -471,3 +471,15 @@ a.contact-kicker:hover {
   padding-bottom: 30px !important;
 }
 
+
+/* Reduce space between Contact section and footer */
+#contact {
+  padding-bottom: 40px !important;
+  margin-bottom: 0 !important;
+}
+
+footer {
+  margin-top: 0 !important;
+  padding-top: 20px !important;
+  min-height: auto !important;
+}
