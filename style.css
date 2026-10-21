@@ -67,8 +67,8 @@ h2{font:600 clamp(38px,5vw,72px)/.98 "Space Grotesk",sans-serif;letter-spacing:-
 .tags span,.tool-list{
   border:1px solid var(--line);color:var(--grey-light);padding:9px 12px;font-size:12px;
 }
-```css
-```css
+css
+css
 .feature-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -121,7 +121,7 @@ h2{font:600 clamp(38px,5vw,72px)/.98 "Space Grotesk",sans-serif;letter-spacing:-
   box-sizing: border-box;
   overflow-wrap: anywhere;
 }
-```
+
 .feature.primary{background:var(--yellow);color:var(--dark)}
 .feature.primary p,.feature.primary .tool-list{color:var(--dark)}
 .feature.primary .number{color:var(--dark)}
