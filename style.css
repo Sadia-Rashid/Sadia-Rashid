@@ -1333,3 +1333,30 @@ footer {
   margin-top: 0 !important;
   padding-top: 0 !important;
 }
+/* FIX: REMOVE SPACE BETWEEN SKILLS AND WHY CHOOSE ME */
+section#skills {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+  min-height: 0 !important;
+}
+
+section#skills .feature-grid {
+  margin-bottom: 0 !important;
+}
+
+section#why-choose-me {
+  margin-top: 0 !important;
+  padding-top: 20px !important;
+}
+
+/* FIX: MAKE YOUR NAME LARGER */
+.hero h1 {
+  font-size: 1.4em !important;
+}
+
+/* SLIGHTLY ENLARGE THE OTHER HERO TEXT */
+.hero .eyebrow,
+.hero .hero-role,
+.hero .hero-copy {
+  font-size: 1.05em !important;
+}
