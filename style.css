@@ -66,8 +66,6 @@ h2{font:600 clamp(38px,5vw,72px)/.98 "Space Grotesk",sans-serif;letter-spacing:-
 .tags span,.tool-list{
   border:1px solid var(--line);color:var(--grey-light);padding:9px 12px;font-size:12px;
 }
-css
-css
 .feature-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -725,12 +723,6 @@ footer {
     transform: none;
   }
 }
-
-
-/* =====================================
-   EXPERIENCE — PREMIUM PORTFOLIO SECTION
-===================================== */
-
 .experience-section {
   position: relative;
   padding-top: 65px;
@@ -1080,9 +1072,6 @@ footer {
   background: #f0c541;
   color: #191919;
 }
-
-/* Workflow / automation-style blocks */
-
 .workflow-panel {
   margin-top: 45px;
   padding: 30px;
