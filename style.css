@@ -1301,9 +1301,6 @@ footer {
     animation: none;
   }
 }
-/* HERO SECTION — FONT SIZE UPDATES */
-
-/* Name: 40% bigger */
 .hero h1 {
   font-size: 1.4em;
 }
@@ -1320,10 +1317,19 @@ footer {
 .hero .hero-copy {
   font-size: 1.05em;
 }
-
 /* Keep the larger name responsive on smaller screens */
 @media (max-width: 768px) {
   .hero h1 {
     font-size: clamp(4rem, 14vw, 8rem);
   }
+}
+/* Remove extra space between Skills and Why Choose Me */
+#skills {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+#why-choose-me {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
 }
