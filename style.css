@@ -725,3 +725,592 @@ footer {
     transform: none;
   }
 }
+
+
+/* =====================================
+   EXPERIENCE — PREMIUM PORTFOLIO SECTION
+===================================== */
+
+.experience-section {
+  position: relative;
+  padding-top: 65px;
+  padding-bottom: 70px;
+  overflow: hidden;
+}
+
+.experience-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+  margin: 20px 0 42px;
+}
+
+.experience-kicker {
+  color: #d9ad25;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin: 0 0 13px;
+}
+
+.experience-heading h2 {
+  max-width: 720px;
+  margin: 0 0 15px;
+  font-size: clamp(32px, 5vw, 58px);
+  line-height: 1.08;
+  letter-spacing: -1.8px;
+}
+
+.experience-intro {
+  max-width: 650px;
+  color: #a9a9a9;
+  font-size: 15px;
+  line-height: 1.9;
+  margin: 0;
+}
+
+.experience-count {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 17px 20px;
+  border: 1px solid #393939;
+  border-left: 3px solid #f0c541;
+  background: #1d1d1d;
+}
+
+.experience-count span {
+  color: #f0c541;
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.experience-count small {
+  color: #aaa;
+  font-size: 9px;
+  letter-spacing: 1.2px;
+}
+
+/* Experience cards */
+
+.experience-timeline {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+.experience-card {
+  position: relative;
+  overflow: hidden;
+  padding: 27px 30px 29px;
+  border: 1px solid #343434;
+  background: #1b1b1b;
+  transition:
+    border-color 0.3s ease,
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.experience-card:hover {
+  border-color: #b99a37;
+  background: #202020;
+  transform: translateY(-4px);
+}
+
+.experience-featured {
+  background: #202020;
+}
+
+.experience-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #363636;
+}
+
+.experience-number {
+  color: #f0c541;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.experience-tag {
+  color: #aaa;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+  text-align: right;
+}
+
+.experience-card-body {
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1fr);
+  gap: 22px;
+  padding-top: 27px;
+}
+
+.experience-icon {
+  display: grid;
+  place-items: center;
+  width: 55px;
+  height: 55px;
+  border: 1px solid #6d5a22;
+  background: #302a19;
+  color: #f0c541;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.experience-type {
+  color: #c6a738;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  margin: 0 0 10px;
+}
+
+.experience-main h3 {
+  color: #f5f5f5;
+  font-size: clamp(20px, 2.5vw, 28px);
+  line-height: 1.3;
+  margin: 0 0 12px;
+  letter-spacing: -0.5px;
+}
+
+.experience-main > p:not(.experience-type) {
+  color: #b3b3b3;
+  font-size: 13px;
+  line-height: 1.9;
+  max-width: 760px;
+  margin: 0 0 20px;
+}
+
+.experience-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 20px 0 6px;
+}
+
+.experience-tags span {
+  padding: 8px 11px;
+  border: 1px solid #3b3b3b;
+  background: #252525;
+  color: #dedede;
+  font-size: 10px;
+  transition: border-color 0.25s ease, color 0.25s ease;
+}
+
+.experience-tags span:hover {
+  color: #f0c541;
+  border-color: #b99a37;
+}
+
+/* Expandable interaction */
+
+.experience-details {
+  margin-top: 22px;
+  border-top: 1px solid #373737;
+}
+
+.experience-details summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 15px 0 2px;
+  color: #f0c541;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  list-style: none;
+}
+
+.experience-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.experience-details summary span {
+  font-size: 17px;
+  transition: transform 0.25s ease;
+}
+
+.experience-details[open] summary span {
+  transform: rotate(45deg);
+}
+
+.experience-detail-content {
+  padding: 8px 0 4px;
+  animation: experienceReveal 0.3s ease;
+}
+
+.experience-detail-content p {
+  color: #aaa;
+  font-size: 12px;
+  line-height: 1.9;
+  margin: 0;
+}
+
+@keyframes experienceReveal {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Website project links */
+
+.website-projects {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 23px 0 4px;
+}
+
+.website-project {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  min-width: 0;
+  padding: 17px;
+  border: 1px solid #3a3a3a;
+  background: #242424;
+  text-decoration: none;
+  transition:
+    border-color 0.25s ease,
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.website-project:hover {
+  border-color: #f0c541;
+  background: #2b281e;
+  transform: translateY(-3px);
+}
+
+.website-project-label {
+  color: #999;
+  font-size: 9px;
+  letter-spacing: 1.3px;
+}
+
+.website-project-name {
+  color: #f5f5f5;
+  font-size: 17px;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.website-project-action {
+  color: #f0c541;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* Newsletter feature */
+
+.newsletter-preview {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  margin: 24px 0 20px;
+  padding: 19px;
+  border: 1px solid #393939;
+  background:
+    linear-gradient(110deg, #29261d 0%, #222 70%);
+}
+
+.newsletter-preview-mark {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 52px;
+  height: 62px;
+  background: #f0c541;
+  color: #1b1b1b;
+  font-size: 23px;
+  font-weight: 900;
+}
+
+.newsletter-preview-label {
+  color: #d8b842;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+}
+
+.newsletter-preview h4 {
+  color: #f5f5f5;
+  font-size: 16px;
+  margin: 6px 0;
+}
+
+.newsletter-preview p {
+  color: #aaa;
+  font-size: 11px;
+  margin: 0;
+  line-height: 1.7;
+}
+
+.experience-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 22px;
+  padding: 12px 16px;
+  border: 1px solid #f0c541;
+  color: #f0c541;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.experience-link:hover {
+  background: #f0c541;
+  color: #191919;
+}
+
+/* Workflow / automation-style blocks */
+
+.workflow-panel {
+  margin-top: 45px;
+  padding: 30px;
+  border: 1px solid #383838;
+  background: #171717;
+}
+
+.workflow-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 22px;
+  margin-bottom: 13px;
+}
+
+.workflow-heading h3 {
+  max-width: 570px;
+  color: #f5f5f5;
+  font-size: clamp(23px, 3vw, 35px);
+  line-height: 1.25;
+  letter-spacing: -0.8px;
+  margin: 0;
+}
+
+.workflow-status {
+  flex-shrink: 0;
+  padding: 9px 11px;
+  border: 1px solid #5b4b20;
+  color: #f0c541;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.workflow-description {
+  max-width: 690px;
+  color: #aaa;
+  font-size: 13px;
+  line-height: 1.8;
+  margin: 15px 0 26px;
+}
+
+.workflow-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.workflow-block {
+  min-width: 0;
+  padding: 18px 15px;
+  border: 1px solid #363636;
+  background: #202020;
+  transition:
+    border-color 0.3s ease,
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.workflow-block:hover {
+  transform: translateY(-5px);
+  border-color: #d2ad35;
+  background: #29261e;
+}
+
+.workflow-block-accent {
+  border-color: #655321;
+  background: #272318;
+}
+
+.workflow-index {
+  color: #aaa;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.workflow-symbol {
+  display: grid;
+  place-items: center;
+  width: 39px;
+  height: 39px;
+  margin: 24px 0 17px;
+  background: #f0c541;
+  color: #1b1b1b;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.workflow-block h4 {
+  color: #f5f5f5;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0 0 9px;
+}
+
+.workflow-block p {
+  color: #aaa;
+  font-size: 11px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.workflow-flow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid #343434;
+}
+
+.workflow-flow span:not(.workflow-arrow) {
+  color: #ccc;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+
+.workflow-arrow {
+  color: #f0c541;
+  font-size: 16px;
+}
+
+/* Responsive layout */
+
+@media (max-width: 900px) {
+  .workflow-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .experience-section {
+    padding-top: 40px;
+    padding-bottom: 45px;
+  }
+
+  .experience-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 28px;
+  }
+
+  .experience-count {
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 15px;
+  }
+
+  .experience-count span {
+    font-size: 25px;
+  }
+
+  .experience-card {
+    padding: 20px 17px 23px;
+  }
+
+  .experience-card-body {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding-top: 21px;
+  }
+
+  .experience-icon {
+    width: 43px;
+    height: 43px;
+  }
+
+  .experience-card-top {
+    align-items: flex-start;
+  }
+
+  .experience-tag {
+    max-width: 65%;
+    line-height: 1.6;
+  }
+
+  .website-projects {
+    grid-template-columns: 1fr;
+  }
+
+  .workflow-panel {
+    margin-top: 30px;
+    padding: 21px 16px;
+  }
+
+  .workflow-heading {
+    flex-direction: column;
+  }
+
+  .workflow-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .workflow-block {
+    padding: 17px;
+  }
+
+  .workflow-symbol {
+    margin: 17px 0 12px;
+  }
+
+  .workflow-flow {
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  .workflow-flow span:not(.workflow-arrow) {
+    font-size: 8px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .experience-card,
+  .experience-tags span,
+  .website-project,
+  .experience-details summary span,
+  .workflow-block,
+  .experience-link {
+    transition: none;
+  }
+
+  .experience-detail-content {
+    animation: none;
+  }
+}
