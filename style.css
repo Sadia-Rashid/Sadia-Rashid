@@ -1360,3 +1360,124 @@ section#why-choose-me {
 .hero .hero-copy {
   font-size: 1.05em !important;
 }
+
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  .workflow-flow span:not(.workflow-arrow) {
+    font-size: 8px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .experience-card,
+  .experience-tags span,
+  .website-project,
+  .experience-details summary span,
+  .workflow-block,
+  .experience-link {
+    transition: none;
+  }
+
+  .experience-detail-content {
+    animation: none;
+  }
+}
+.hero h1 {
+  font-size: 1.4em;
+}
+
+/* Other text: 5% bigger */
+.hero .eyebrow {
+  font-size: 1.05em;
+}
+
+.hero .hero-role {
+  font-size: 1.05em;
+}
+
+.hero .hero-copy {
+  font-size: 1.05em;
+}
+/* Keep the larger name responsive on smaller screens */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: clamp(4rem, 14vw, 8rem);
+  }
+}
+/* Remove extra space between Skills and Why Choose Me */
+#skills {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+#why-choose-me {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+/* FIX: REMOVE SPACE BETWEEN SKILLS AND WHY CHOOSE ME */
+section#skills {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+  min-height: 0 !important;
+}
+
+section#skills .feature-grid {
+  margin-bottom: 0 !important;
+}
+
+section#why-choose-me {
+  margin-top: 0 !important;
+  padding-top: 20px !important;
+}
+
+/* FIX: MAKE YOUR NAME LARGER */
+.hero h1 {
+  font-size: 1.4em !important;
+}
+
+/* SLIGHTLY ENLARGE THE OTHER HERO TEXT */
+.hero .eyebrow,
+.hero .hero-role,
+.hero .hero-copy {
+  font-size: 1.05em !important;
+}
+
+/* ===== FINAL FIX: HERO TYPOGRAPHY + SECTION SPACING ===== */
+
+/* Name: 40% larger than the currently enforced clamp(36px, 5vw, 58px) */
+.hero h1 {
+  font-size: clamp(50.4px, 7vw, 81.2px) !important;
+}
+
+/* Other hero text: approximately 5% larger than their current sizes */
+.hero .eyebrow {
+  font-size: 11.55px !important;
+}
+
+.hero .hero-role {
+  font-size: 23.1px !important;
+}
+
+.hero .hero-copy {
+  font-size: 16.8px !important;
+}
+
+/* Remove excess vertical padding between Skills and Why Choose Me */
+#skills {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.why-section {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Keep the typography comfortable on small screens */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: clamp(50.4px, 14vw, 81.2px) !important;
+  }
+}
