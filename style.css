@@ -1301,3 +1301,29 @@ footer {
     animation: none;
   }
 }
+/* HERO SECTION — FONT SIZE UPDATES */
+
+/* Name: 40% bigger */
+.hero h1 {
+  font-size: 1.4em;
+}
+
+/* Other text: 5% bigger */
+.hero .eyebrow {
+  font-size: 1.05em;
+}
+
+.hero .hero-role {
+  font-size: 1.05em;
+}
+
+.hero .hero-copy {
+  font-size: 1.05em;
+}
+
+/* Keep the larger name responsive on smaller screens */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: clamp(4rem, 14vw, 8rem);
+  }
+}
