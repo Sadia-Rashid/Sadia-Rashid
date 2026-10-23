@@ -2057,3 +2057,368 @@ button {
     transform: none;
   }
 }
+
+
+
+/* ============================================
+   SIGNATURE MOTION — PREMIUM PORTFOLIO
+   Original colours preserved
+============================================ */
+
+/* 1. Ambient yellow light behind the hero */
+.hero {
+  isolation: isolate;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: min(60vw, 680px);
+  aspect-ratio: 1;
+  right: -12%;
+  top: 12%;
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(
+    circle,
+    rgba(242, 210, 27, 0.105) 0%,
+    rgba(242, 210, 27, 0.035) 38%,
+    transparent 70%
+  );
+  animation: signatureGlow 8s ease-in-out infinite alternate;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 10%;
+  right: 4%;
+  width: 1px;
+  height: 65%;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--line),
+    rgba(242, 210, 27, 0.45),
+    transparent
+  );
+  opacity: 0.65;
+  transform-origin: top;
+  animation: signatureLine 5s ease-in-out infinite;
+}
+
+@keyframes signatureGlow {
+  from {
+    transform: translate3d(0, 0, 0) scale(0.92);
+    opacity: 0.55;
+  }
+  to {
+    transform: translate3d(-28px, 22px, 0) scale(1.12);
+    opacity: 1;
+  }
+}
+
+@keyframes signatureLine {
+  0%, 100% { opacity: 0.25; }
+  50% { opacity: 0.8; }
+}
+
+/* 2. Give the name a cinematic entrance */
+.hero h1 {
+  animation: signatureNameIn 1s cubic-bezier(.2,.7,.2,1) both;
+}
+
+.hero h1 span {
+  display: inline-block;
+  transition:
+    color 0.35s ease,
+    text-shadow 0.35s ease,
+    transform 0.35s ease;
+}
+
+.hero h1 span:hover {
+  text-shadow: 0 0 28px rgba(242, 210, 27, 0.2);
+  transform: translateX(8px);
+}
+
+@keyframes signatureNameIn {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+    letter-spacing: -0.11em;
+    filter: blur(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+/* 3. Animated highlight line beneath section headings */
+.section-content h2,
+.why-header h2,
+.project-intro h2 {
+  position: relative;
+  width: fit-content;
+  max-width: 100%;
+}
+
+.section-content h2::after,
+.why-header h2::after,
+.project-intro h2::after {
+  content: "";
+  display: block;
+  width: 46px;
+  height: 3px;
+  margin-top: 18px;
+  background: var(--yellow);
+  transform-origin: left;
+  transition: width 0.45s cubic-bezier(.2,.7,.2,1);
+}
+
+.section-content h2:hover::after,
+.why-header h2:hover::after,
+.project-intro h2:hover::after {
+  width: min(140px, 65%);
+}
+
+/* 4. Premium moving shine on cards */
+.feature-grid > .feature,
+.why-card,
+.experience-card,
+.project,
+.education-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.feature-grid > .feature::after,
+.why-card::after,
+.experience-card::after,
+.project::after,
+.education-card::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  background: linear-gradient(
+    115deg,
+    transparent 20%,
+    rgba(242, 210, 27, 0.055) 45%,
+    transparent 70%
+  );
+  transform: translateX(-110%);
+  transition:
+    transform 0.75s cubic-bezier(.2,.7,.2,1),
+    opacity 0.25s ease;
+}
+
+.feature-grid > .feature:hover::after,
+.why-card:hover::after,
+.experience-card:hover::after,
+.project:hover::after,
+.education-card:hover::after {
+  opacity: 1;
+  transform: translateX(110%);
+}
+
+/* Keep card content above its decorative shine */
+.feature-grid > .feature > *,
+.why-card > *,
+.experience-card > *,
+.project > *,
+.education-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* 5. More responsive card lift and border glow */
+.feature-grid > .feature,
+.why-card,
+.experience-card,
+.project,
+.website-project,
+.education-card {
+  transition:
+    transform 0.35s cubic-bezier(.2,.7,.2,1),
+    border-color 0.35s ease,
+    box-shadow 0.35s ease,
+    background-color 0.35s ease;
+}
+
+.why-card:hover,
+.experience-card:hover,
+.project:hover,
+.website-project:hover {
+  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.2);
+}
+
+.feature-grid > .feature:hover,
+.education-card:hover {
+  border-color: var(--yellow);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.14);
+}
+
+/* 6. Animated number markers */
+.why-number,
+.number,
+.experience-icon {
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    color 0.35s ease;
+}
+
+.why-card:hover .why-number,
+.feature-grid > .feature:hover .number {
+  transform: translateY(-3px) scale(1.06);
+}
+
+.experience-card:hover .experience-icon {
+  transform: rotate(-6deg) scale(1.06);
+}
+
+/* 7. Make the contact actions feel clickable */
+.contact-link {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.contact-link::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: var(--yellow);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s cubic-bezier(.2,.7,.2,1);
+}
+
+.contact-link:hover::before {
+  transform: scaleX(1);
+}
+
+.contact-link:hover {
+  color: var(--dark);
+  border-color: var(--yellow);
+}
+
+/* 8. Animated arrow */
+.circle-arrow {
+  animation: signatureArrow 2.4s ease-in-out infinite;
+}
+
+@keyframes signatureArrow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(7px);
+  }
+}
+
+.circle-arrow:hover {
+  animation-play-state: paused;
+  transform: translateY(-3px);
+}
+
+/* 9. Subtle entrance as sections enter the viewport
+   Supported browsers only; other browsers keep
+   the normal visible layout. */
+@supports (animation-timeline: view()) {
+  .why-card,
+  .experience-card,
+  .project,
+  .website-project {
+    animation: signatureReveal both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 28%;
+  }
+
+  .why-card:nth-child(even),
+  .project:nth-child(even) {
+    animation-delay: 70ms;
+  }
+
+  @keyframes signatureReveal {
+    from {
+      opacity: 0.35;
+      transform: translateY(24px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* 10. Keep the experience refined on mobile */
+@media (max-width: 800px) {
+  .hero::before {
+    width: 95vw;
+    right: -35%;
+    top: 14%;
+  }
+
+  .hero::after {
+    right: 2%;
+    opacity: 0.35;
+  }
+
+  .hero h1 span:hover {
+    transform: none;
+  }
+
+  .section-content h2::after,
+  .why-header h2::after,
+  .project-intro h2::after {
+    margin-top: 13px;
+  }
+
+  .feature-grid > .feature:hover,
+  .why-card:hover,
+  .experience-card:hover,
+  .project:hover,
+  .website-project:hover,
+  .education-card:hover {
+    transform: none;
+  }
+}
+
+/* 11. Accessibility: respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .hero::before,
+  .hero::after,
+  .hero h1,
+  .hero h1 span,
+  .circle-arrow,
+  .highlight-symbol {
+    animation: none !important;
+    filter: none !important;
+  }
+
+  .feature-grid > .feature::after,
+  .why-card::after,
+  .experience-card::after,
+  .project::after,
+  .education-card::after {
+    display: none;
+  }
+
+  .why-card,
+  .experience-card,
+  .project,
+  .website-project {
+    animation: none !important;
+    opacity: 1;
+    transform: none;
+  }
+}
