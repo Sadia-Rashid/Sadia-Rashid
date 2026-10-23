@@ -1481,3 +1481,579 @@ section#why-choose-me {
     font-size: clamp(50.4px, 14vw, 81.2px) !important;
   }
 }
+
+
+/* ==========================================
+   PREMIUM RESPONSIVE UI ENHANCEMENTS
+   Preserves existing portfolio colours
+========================================== */
+
+/* 1. Smoother scrolling and anchor positioning */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+body {
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+main {
+  overflow-wrap: break-word;
+}
+
+img,
+video,
+iframe {
+  max-width: 100%;
+}
+
+/* 2. Refined sticky navigation */
+.site-header {
+  transition:
+    padding 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.brand {
+  transition: transform 0.3s ease;
+}
+
+.brand:hover {
+  transform: translateY(-2px);
+}
+
+.nav a {
+  position: relative;
+  display: inline-block;
+  padding: 8px 0;
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: 2px;
+  height: 2px;
+  background: var(--yellow);
+  transition: right 0.3s ease;
+}
+
+.nav a:hover {
+  color: var(--yellow);
+  transform: translateY(-1px);
+}
+
+.nav a:hover::after,
+.nav a:focus-visible::after {
+  right: 0;
+}
+
+.nav a:focus-visible,
+.brand:focus-visible,
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--yellow);
+  outline-offset: 5px;
+}
+
+/* 3. More refined hero section */
+.hero {
+  isolation: isolate;
+}
+
+.hero .eyebrow {
+  animation: portfolioFadeUp 0.7s ease both;
+}
+
+.hero h1 {
+  animation: portfolioFadeUp 0.85s 0.1s ease both;
+}
+
+.hero .hero-role {
+  animation: portfolioFadeUp 0.75s 0.2s ease both;
+}
+
+.hero .hero-copy {
+  animation: portfolioFadeUp 0.75s 0.3s ease both;
+}
+
+.hero-bottom {
+  align-items: start;
+}
+
+.circle-arrow {
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease;
+  animation: portfolioFloat 3s ease-in-out infinite;
+}
+
+.circle-arrow:hover {
+  background: var(--yellow);
+  color: var(--dark);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.18);
+}
+
+/* 4. Consistent section headings */
+.section-label {
+  transition: letter-spacing 0.3s ease;
+}
+
+.section-label:hover {
+  letter-spacing: 0.16em;
+}
+
+.section-content > p {
+  line-height: 1.85;
+}
+
+.tags span {
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease;
+}
+
+.tags span:hover {
+  transform: translateY(-3px);
+  border-color: var(--yellow);
+  color: var(--yellow);
+}
+
+/* 5. Skills cards: subtle premium hover */
+.feature-grid {
+  overflow: hidden;
+}
+
+.feature-grid > .feature {
+  position: relative;
+  min-width: 0;
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.feature-grid > .feature::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 0;
+  background: var(--yellow);
+  transition: height 0.3s ease;
+}
+
+.feature-grid > .feature:hover::before {
+  height: 100%;
+}
+
+.feature-grid > .feature:hover {
+  position: relative;
+  z-index: 1;
+  background: var(--dark) !important;
+}
+
+.feature-grid > .feature h3 {
+  transition: color 0.25s ease;
+}
+
+.feature-grid > .feature:hover h3 {
+  color: var(--yellow);
+}
+
+.feature-grid > .feature .number {
+  transition: transform 0.3s ease;
+}
+
+.feature-grid > .feature:hover .number {
+  transform: translateX(4px);
+}
+
+/* 6. Why Choose Me cards */
+.why-card {
+  transform: translateY(0);
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+}
+
+.why-number {
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.why-card:hover .why-number {
+  background: rgba(242, 210, 27, 0.08);
+  transform: rotate(-3deg);
+}
+
+.why-highlight {
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.why-highlight:hover {
+  transform: translateY(-4px);
+  border-color: var(--yellow);
+}
+
+.highlight-symbol {
+  display: inline-block;
+  animation: portfolioFloat 4s ease-in-out infinite;
+}
+
+/* 7. Experience cards and project links */
+.experience-card,
+.website-project,
+.project {
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease;
+}
+
+.experience-card:hover,
+.project:hover {
+  transform: translateY(-4px);
+  border-color: var(--yellow);
+}
+
+.website-project:hover {
+  transform: translateY(-4px);
+}
+
+.experience-icon {
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.experience-card:hover .experience-icon {
+  transform: translateY(-3px);
+  border-color: var(--yellow);
+}
+
+.experience-tags span {
+  border-radius: 3px;
+}
+
+/* 8. Contact actions */
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 48px;
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.contact-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* 9. Consistent animation */
+@keyframes portfolioFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes portfolioFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+/* 10. Tablet responsiveness */
+@media (max-width: 900px) {
+  .site-header {
+    padding: 18px 4vw;
+  }
+
+  .nav {
+    gap: 16px;
+    font-size: 11px;
+  }
+
+  .section.split {
+    column-gap: 28px;
+  }
+
+  .why-header {
+    gap: 24px;
+  }
+
+  .why-card {
+    padding: 24px;
+  }
+
+  .experience-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+/* 11. Mobile navigation and layout */
+@media (max-width: 800px) {
+  html {
+    scroll-padding-top: 82px;
+  }
+
+  .site-header {
+    min-height: 66px;
+    padding: 14px 20px;
+  }
+
+  .brand {
+    font-size: 24px;
+  }
+
+  .menu-btn {
+    display: block;
+    padding: 10px 0 10px 12px;
+    cursor: pointer;
+  }
+
+  .nav {
+    top: 100%;
+    max-height: calc(100dvh - 80px);
+    overflow-y: auto;
+    padding: 18px 22px 24px;
+    gap: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .nav a {
+    display: block;
+    width: 100%;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 12px;
+  }
+
+  .nav a::after {
+    display: none;
+  }
+
+  .hero {
+    min-height: 92svh;
+    min-height: 92vh;
+    padding-top: 125px;
+    padding-bottom: 100px;
+  }
+
+  .hero h1 {
+    overflow-wrap: normal;
+    letter-spacing: -0.06em;
+  }
+
+  .hero-bottom {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .hero-role {
+    font-size: clamp(19px, 5vw, 24px);
+  }
+
+  .hero-copy {
+    font-size: 15px;
+  }
+
+  .circle-arrow {
+    right: 20px;
+    bottom: 24px;
+    width: 48px;
+    height: 48px;
+  }
+
+  .section {
+    padding: 76px 22px;
+  }
+
+  .section.split {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 22px;
+  }
+
+  .section-content > p {
+    font-size: 15px;
+  }
+
+  .why-header {
+    grid-template-columns: 1fr;
+  }
+
+  .why-grid,
+  .feature-grid,
+  .project-grid,
+  .website-projects {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .why-card-cost {
+    grid-column: auto;
+  }
+
+  .experience-card {
+    padding: 22px;
+  }
+
+  .experience-card-body {
+    grid-template-columns: 42px minmax(0, 1fr);
+    gap: 15px;
+  }
+
+  .experience-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .education-card {
+    padding: 24px;
+  }
+
+  .contact {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .contact-actions {
+    gap: 12px;
+  }
+
+  .contact-link {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  footer {
+    padding: 22px;
+    gap: 12px;
+    line-height: 1.8;
+  }
+}
+
+/* 12. Small mobile screens */
+@media (max-width: 420px) {
+  .section {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .hero .eyebrow {
+    font-size: 10px;
+    line-height: 1.8;
+  }
+
+  .hero h1 {
+    font-size: clamp(44px, 15vw, 64px) !important;
+    line-height: 0.95;
+  }
+
+  .section-content h2,
+  .why-header h2 {
+    font-size: clamp(30px, 9vw, 42px);
+  }
+
+  .feature-grid > .feature {
+    padding: 22px 19px !important;
+  }
+
+  .why-card {
+    padding: 21px;
+  }
+
+  .experience-card {
+    padding: 18px;
+  }
+
+  .experience-card-body {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .service-list {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .contact-link {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* 13. Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .hero .eyebrow,
+  .hero h1,
+  .hero .hero-role,
+  .hero .hero-copy {
+    opacity: 1;
+    transform: none;
+  }
+}
