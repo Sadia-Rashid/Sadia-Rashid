@@ -2617,3 +2617,413 @@ button {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* ==========================================
+   SADIA RASHID — PINK THEME + TYPOGRAPHY
+   Paste this at the VERY END of style.css
+   ========================================== */
+
+/* 1. Replace the existing colour variables */
+:root {
+  --yellow: #D94D65;
+  --yellow-soft: #E98C98;
+  --charcoal: #FFF7F8;
+  --dark: #F8BFC5;
+  --grey: #745B63;
+  --grey-light: #60434B;
+  --white: #35242A;
+  --line: #F0CDD3;
+}
+
+/* 2. Main website background and typography */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+body {
+  background: #FFF7F8 !important;
+  color: #35242A !important;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6,
+.brand, .hero-role, .service-list > div {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+/* 3. Headings and body text */
+h2 {
+  font-size: clamp(36px, 4.5vw, 64px);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+  color: #35242A;
+}
+
+.hero h1 {
+  font-size: clamp(50px, 8vw, 112px) !important;
+  line-height: 0.95;
+  letter-spacing: -0.065em;
+}
+
+.hero-role {
+  font-size: clamp(20px, 2vw, 25px);
+  line-height: 1.35;
+}
+
+.hero-copy,
+.section-content > p,
+.why-intro {
+  color: #745B63 !important;
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+.eyebrow,
+.section-label,
+.contact-kicker,
+.hero h1 span,
+.brand span {
+  color: #D94D65 !important;
+}
+
+/* 4. Header and navigation */
+.site-header {
+  background: rgba(255, 247, 248, 0.96) !important;
+  border-bottom-color: #F0CDD3 !important;
+}
+
+.nav a {
+  color: #745B63 !important;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.nav a:hover,
+.nav a:focus-visible {
+  color: #D94D65 !important;
+}
+
+.nav a::after {
+  background: #D94D65 !important;
+}
+
+.menu-btn {
+  color: #D94D65 !important;
+}
+
+@media (max-width: 800px) {
+  .nav {
+    background: #FFF7F8 !important;
+    border-color: #F0CDD3 !important;
+  }
+
+  .nav a {
+    border-color: #F0CDD3 !important;
+  }
+}
+
+/* 5. Buttons and links */
+.circle-arrow,
+.contact-link,
+.experience-link {
+  color: #D94D65 !important;
+  border-color: #D94D65 !important;
+}
+
+.circle-arrow:hover,
+.contact-link:hover,
+.experience-link:hover {
+  background: #D94D65 !important;
+  color: #FFFFFF !important;
+}
+
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* 6. Skills cards */
+.feature-grid {
+  background: #F0CDD3 !important;
+  border-color: #F0CDD3 !important;
+  gap: 1px !important;
+}
+
+.feature-grid > .feature,
+.feature-grid > .feature.primary {
+  background: #FFFFFF !important;
+  color: #35242A !important;
+  border-color: #F0CDD3 !important;
+}
+
+.feature-grid > .feature h3,
+.feature-grid > .feature.primary h3 {
+  color: #35242A !important;
+}
+
+.feature-grid > .feature p,
+.feature-grid > .feature.primary p,
+.feature-grid > .feature .tool-list,
+.feature-grid > .feature.primary .tool-list {
+  color: #745B63 !important;
+  border-color: #F0CDD3 !important;
+}
+
+.feature-grid > .feature .number,
+.feature-grid > .feature.primary .number {
+  color: #D94D65 !important;
+}
+
+.feature-grid > .feature::before {
+  background: #D94D65 !important;
+}
+
+.feature-grid > .feature:hover {
+  background: #FCE9EC !important;
+}
+
+.feature-grid > .feature:hover h3 {
+  color: #D94D65 !important;
+}
+
+/* 7. Why Choose Me section */
+.why-highlight,
+.why-card,
+.why-card-featured,
+.why-card-cost {
+  background: #FFFFFF !important;
+  border-color: #F0CDD3 !important;
+  color: #35242A !important;
+}
+
+.why-card:hover,
+.why-highlight:hover {
+  background: #FCE9EC !important;
+  border-color: #D94D65 !important;
+}
+
+.why-card h3,
+.why-highlight h3 {
+  color: #35242A !important;
+}
+
+.why-card p,
+.why-intro,
+.why-footer p {
+  color: #745B63 !important;
+}
+
+.why-number,
+.highlight-symbol,
+.highlight-label,
+.why-tag,
+.why-card-bottom,
+.why-footer span {
+  color: #D94D65 !important;
+}
+
+.why-number {
+  border-color: #F0CDD3 !important;
+}
+
+.why-card-bottom,
+.why-footer {
+  border-color: #F0CDD3 !important;
+}
+
+.why-card:hover .why-number {
+  background: #FCE9EC !important;
+}
+
+/* 8. Experience section */
+.experience-card,
+.experience-featured,
+.workflow-panel,
+.workflow-block,
+.website-project,
+.newsletter-preview {
+  background: #FFFFFF !important;
+  border-color: #F0CDD3 !important;
+}
+
+.experience-card:hover,
+.website-project:hover,
+.workflow-block:hover {
+  background: #FCE9EC !important;
+  border-color: #D94D65 !important;
+}
+
+.experience-main h3,
+.workflow-heading h3,
+.workflow-block h4,
+.newsletter-preview h4,
+.website-project-name {
+  color: #35242A !important;
+}
+
+.experience-main > p:not(.experience-type),
+.experience-intro,
+.workflow-description,
+.workflow-block p,
+.newsletter-preview p,
+.experience-detail-content p {
+  color: #745B63 !important;
+}
+
+.experience-kicker,
+.experience-type,
+.experience-icon,
+.experience-count span,
+.experience-link,
+.experience-details summary,
+.experience-tags span:hover,
+.website-project-action,
+.workflow-symbol,
+.workflow-index,
+.workflow-flow .workflow-arrow {
+  color: #D94D65 !important;
+}
+
+.experience-icon,
+.workflow-symbol,
+.newsletter-preview-mark {
+  background: #FCE9EC !important;
+  border-color: #F0CDD3 !important;
+}
+
+.newsletter-preview-mark {
+  color: #D94D65 !important;
+}
+
+.experience-count,
+.workflow-status {
+  background: #FFFFFF !important;
+  border-color: #F0CDD3 !important;
+}
+
+.experience-count small,
+.experience-tag,
+.experience-number {
+  color: #745B63 !important;
+}
+
+.experience-card-top,
+.experience-details,
+.experience-tags span,
+.workflow-flow {
+  border-color: #F0CDD3 !important;
+}
+
+.experience-tags span,
+.workflow-status {
+  background: #FCE9EC !important;
+}
+
+.experience-tags span {
+  color: #60434B !important;
+}
+
+.workflow-block-accent {
+  background: #FCE9EC !important;
+  border-color: #F0CDD3 !important;
+}
+
+/* 9. Education and projects */
+.education-card,
+.project {
+  background: #FFFFFF !important;
+  border-color: #F0CDD3 !important;
+}
+
+.education-card h2,
+.project h3 {
+  color: #35242A !important;
+}
+
+.education-card h3,
+.education-card p,
+.project p {
+  color: #745B63 !important;
+}
+
+.education-card span,
+.education-card strong,
+.project > span,
+.project em {
+  color: #D94D65 !important;
+}
+
+.project-grid {
+  background: #F0CDD3 !important;
+  border-color: #F0CDD3 !important;
+}
+
+/* 10. Services band */
+.service-band {
+  background: #F8BFC5 !important;
+  color: #35242A !important;
+}
+
+.service-band .section-label {
+  color: #35242A !important;
+}
+
+.service-list,
+.service-list > div {
+  border-color: rgba(53, 36, 42, 0.25) !important;
+}
+
+.service-list > div {
+  color: #35242A !important;
+}
+
+.service-list > div b {
+  color: #60434B !important;
+}
+
+/* 11. Contact and footer */
+#contact,
+footer {
+  color: #35242A;
+}
+
+footer {
+  border-color: #F0CDD3 !important;
+  background: #FFF7F8 !important;
+}
+
+footer a {
+  color: #D94D65 !important;
+}
+
+.coming {
+  color: #745B63 !important;
+}
+
+/* 12. Selection and keyboard accessibility */
+::selection {
+  background: #F8BFC5;
+  color: #35242A;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #D94D65 !important;
+  outline-offset: 4px;
+}
+
+/* 13. Respect reduced-motion settings */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
