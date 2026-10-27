@@ -3027,3 +3027,35 @@ button:focus-visible {
   }
 }
 
+/* PINK BACKGROUND — ENTIRE WEBSITE */
+
+html,
+body {
+  background-color: #F8BFC5 !important;
+}
+
+main,
+section,
+.section,
+.section-shell {
+  background-color: transparent !important;
+}
+
+/* Keep content cards white for contrast */
+.education-card,
+.experience-card,
+.project,
+.why-card,
+.feature-grid > .feature,
+.workflow-panel,
+.workflow-block,
+.website-project {
+  background-color: #FFF7F8 !important;
+}
+
+/* Keep the header pink too */
+.site-header,
+footer {
+  background-color: #F8BFC5 !important;
+}
+
